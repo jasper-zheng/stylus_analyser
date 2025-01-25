@@ -1,8 +1,11 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2025-01-25 13:15:45 +0000
+title:  "Graphical User Interface"
+date:   2025-01-22 13:15:45 +0000
+chapter: Chapter 4.2
 categories: jekyll update
+type: Data Collections
+excerpt: Each workshop activity has a Graphical User Interface (GUI) page displaying relevant information, instructions, and the instrument’s user interface. The investigator’s laptop controls the switching between GUI pages and switching between terrains in participants’ instrument...
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
