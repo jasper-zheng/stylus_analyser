@@ -5,28 +5,11 @@ date:   2025-01-22 13:15:45 +0000
 chapter: Chapter 3.3 
 categories: jekyll update
 type: Instrument Design
-excerpt: Each workshop activity has a Graphical User Interface (GUI) page displaying relevant information, instructions, and the instrument’s user interface. The investigator’s laptop controls the switching between GUI pages and switching between terrains in participants’ instrument...
+excerpt: We designed a digital musical instrument with a stylus and tablet interface as a research probe. The instrument embeds Latent Terrain, an adapted form of latent space of a neural audio synthesis model, inspired by wave terrain synthesis. One can navigate the latent terrain using gestures afforded by the stylus and tablet...
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-Jekyll requires blog post files to be named according to the following format:
+![img](../../../../../media/terrain_embed.png)
 
-`YEAR-MONTH-DAY-title.MARKUP`
+The tablet interface captures the spatial location of the stylus's pen tip on the canvas as a pair of coordinates $$(x, y)$$, and the pressure applied on the canvas as $p$. We designed a mapping model called \textit{Latent Terrain} (hereby referred to as the terrain). A terrain is a set of one-to-one mapping between a given pair of $(x, y)$ to an 8-dimensional latent vector $z$. Therefore, a 2D canvas can be rendered as a plane of latent vectors tiled on each pixel location. When the stylus moves on the canvas, the terrain immediately retrieves a latent vector $z$ corresponding to the stylus' $(x, y)$. 
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
-
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+We used two algorithmic strategies to generate two terrains, respectively: a Variational AutoEncoder (VAE) \citep{kingma_auto-encoding_2013} and a Fourier-Compositional Pattern Producing Networks (Fourier-CPPN) \citep{tesfaldet_fourier-cppns_2019}. A terrain is fixed after it was generated. While the technical details and the procedure used for generating the two terrains
