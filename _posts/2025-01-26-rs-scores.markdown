@@ -9,4 +9,16 @@ excerpt: Participants were asked to explore and find pieces of sound or music in
 ---
 
 
-hi
+hi Participants were asked to explore and find pieces of sound or music in each terrain, and then draw a “score” on the canvas to help them perform these pieces. They were encouraged to be creative and use any kinds of notation (graphical/textual) in the score... Participants were asked to explore and find pieces of sound or music in each terrain, and then draw a “score” on the canvas to help them perform these pieces. They were encouraged to be creative and use any kinds of notation (graphical/textual) in the score... Participants were asked to explore and find pieces of sound or music in each terrain, and then draw a “score” on the canvas to help them perform these pieces. They were encouraged to be creative and use any kinds of notation (graphical/textual) in the score...
+
+<div id="canvasContainer"></div>
+<div id="canvasControls">
+	<select id="selectPage">
+<!--         <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+        <option value="Option 4">Option 4</option> -->
+    </select>
+
+</div>
+aaaa
