@@ -1,0 +1,350 @@
+{
+    "s1d1_bodyscan": {
+        "logs": "soundwalking_data_clean/logs/s1d1_bodyscan drawing log - Mon Oct  7 13-39-54 2024.txt",
+        "audio": "none"
+    },
+    "s1d1_ter1": {
+        "logs": "soundwalking_data_clean/logs/s1d1_ter1 drawing log - Mon Oct  7 13-47-40 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s1d1_ter1.mp3"
+    },
+    "s1d1_ter1_score": {
+        "logs": "soundwalking_data_clean/logs/s1d1_ter1_score9 drawing log - Mon Oct  7 14-42-55 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s1d1_score1.mp3"
+    },
+    "s1d1_ter2": {
+        "logs": "soundwalking_data_clean/logs/s1d1_ter2 drawing log - Mon Oct  7 14-02-08 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s1d1_ter2.mp3"
+    },
+    "s1d1_ter2_score": {
+        "logs": "soundwalking_data_clean/logs/s1d1_ter2_score6 drawing log - Mon Oct  7 14-41-48 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s1d1_score2.mp3"
+    },
+    "s1d2_bodyscan": {
+        "logs": "soundwalking_data_clean/logs/s1d2_bodyscan drawing log - Mon Oct  7 13-39-48 2024.txt",
+        "audio": "none"
+    },
+    "s1d2_ter1": {
+        "logs": "soundwalking_data_clean/logs/s1d2_ter1 drawing log - Mon Oct  7 13-47-34 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s1d2_ter1.mp3"
+    },
+    "s1d2_ter1_score": {
+        "logs": "soundwalking_data_clean/logs/s1d2_ter1_score12 drawing log - Mon Oct  7 14-16-43 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s1d2_score1.mp3"
+    },
+    "s1d2_ter2": {
+        "logs": "soundwalking_data_clean/logs/s1d2_ter2 drawing log - Mon Oct  7 14-02-01 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s1d2_ter2.mp3"
+    },
+    "s1d2_ter2_score": {
+        "logs": "soundwalking_data_clean/logs/s1d2_ter2_score0 drawing log - Mon Oct  7 14-24-04 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s1d2_score2.mp3"
+    },
+    "s1d3_bodyscan": {
+        "logs": "soundwalking_data_clean/logs/s1d3_bodyscan drawing log - Mon Oct  7 13-39-53 2024.txt",
+        "audio": "none"
+    },
+    "s1d3_ter1": {
+        "logs": "soundwalking_data_clean/logs/s1d3_ter1 drawing log - Mon Oct  7 13-47-39 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s1d3_ter1.mp3"
+    },
+    "s1d3_ter1_score": {
+        "logs": "soundwalking_data_clean/logs/s1d3_ter1_score7 drawing log - Mon Oct  7 14-31-55 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s1d3_score1.mp3"
+    },
+    "s1d3_ter2": {
+        "logs": "soundwalking_data_clean/logs/s1d3_ter2 drawing log - Mon Oct  7 14-02-06 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s1d3_ter2.mp3"
+    },
+    "s1d3_ter2_score": {
+        "logs": "soundwalking_data_clean/logs/s1d3_ter2_score4 drawing log - Mon Oct  7 14-31-59 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s1d3_score2.mp3"
+    },
+    "s2d1_bodyscan": {
+        "logs": "soundwalking_data_clean/logs/s2d1_bodyscan drawing log - Mon Oct  7 16-00-24 2024.txt",
+        "audio": "none"
+    },
+    "s2d1_ter1": {
+        "logs": "soundwalking_data_clean/logs/s2d1_ter1 drawing log - Mon Oct  7 16-12-31 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s2d1_ter1.mp3"
+    },
+    "s2d1_ter1_score": {
+        "logs": "soundwalking_data_clean/logs/s2d1_ter1_score5 drawing log - Mon Oct  7 17-20-59 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s2d1_score1.mp3"
+    },
+    "s2d1_ter2": {
+        "logs": "soundwalking_data_clean/logs/s2d1_ter2 drawing log - Mon Oct  7 16-19-44 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s2d1_ter2.mp3"
+    },
+    "s2d1_ter2_score": {
+        "logs": "soundwalking_data_clean/logs/s2d1_ter2_score3 drawing log - Mon Oct  7 17-21-12 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s2d1_score2.mp3"
+    },
+    "s2d2_bodyscan": {
+        "logs": "soundwalking_data_clean/logs/s2d2_bodyscan drawing log - Mon Oct  7 16-00-18 2024.txt",
+        "audio": "none"
+    },
+    "s2d2_ter1": {
+        "logs": "soundwalking_data_clean/logs/s2d2_ter1 drawing log - Mon Oct  7 16-12-24 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s2d2_ter1.mp3"
+    },
+    "s2d2_ter1_score": {
+        "logs": "soundwalking_data_clean/logs/s2d2_ter1_score0 drawing log - Mon Oct  7 16-43-23 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s2d2_score1.mp3"
+    },
+    "s2d2_ter2": {
+        "logs": "soundwalking_data_clean/logs/s2d2_ter2 drawing log - Mon Oct  7 16-19-38 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s2d2_ter2.mp3"
+    },
+    "s2d2_ter2_score": {
+        "logs": "soundwalking_data_clean/logs/s2d2_ter2_score0 drawing log - Mon Oct  7 16-50-53 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s2d2_score2.mp3"
+    },
+    "s2d3_bodyscan": {
+        "logs": "soundwalking_data_clean/logs/s2d3_bodyscan drawing log - Mon Oct  7 16-00-23 2024.txt",
+        "audio": "none"
+    },
+    "s2d3_ter1": {
+        "logs": "soundwalking_data_clean/logs/s2d3_ter1 drawing log - Mon Oct  7 16-12-29 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s2d3_ter1.mp3"
+    },
+    "s2d3_ter1_score": {
+        "logs": "soundwalking_data_clean/logs/s2d3_ter1_score0 drawing log - Mon Oct  7 16-43-28 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s2d3_score1.mp3"
+    },
+    "s2d3_ter2": {
+        "logs": "soundwalking_data_clean/logs/s2d3_ter2 drawing log - Mon Oct  7 16-19-43 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s2d3_ter2.mp3"
+    },
+    "s2d3_ter2_score": {
+        "logs": "soundwalking_data_clean/logs/s2d3_ter2_score0 drawing log - Mon Oct  7 16-50-58 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s2d3_score2.mp3"
+    },
+    "s3d1_bodyscan": {
+        "logs": "soundwalking_data_clean/logs/s3d1_bodyscan drawing log - Thu Oct 10 11-25-55 2024.txt",
+        "audio": "none"
+    },
+    "s3d1_ter1": {
+        "logs": "soundwalking_data_clean/logs/s3d1_ter1 drawing log - Thu Oct 10 11-32-47 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s3d1_ter1.mp3"
+    },
+    "s3d1_ter1_score": {
+        "logs": "soundwalking_data_clean/logs/s3d1_ter1_score1 drawing log - Thu Oct 10 13-11-20 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s3d1_score1.mp3"
+    },
+    "s3d1_ter2": {
+        "logs": "soundwalking_data_clean/logs/s3d1_ter2 drawing log - Thu Oct 10 11-39-20 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s3d1_ter2.mp3"
+    },
+    "s3d1_ter2_score": {
+        "logs": "soundwalking_data_clean/logs/s3d1_ter2_score1 drawing log - Thu Oct 10 13-11-24 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s3d1_score2.mp3"
+    },
+    "s3d2_bodyscan": {
+        "logs": "soundwalking_data_clean/logs/s3d2_bodyscan drawing log - Thu Oct 10 11-25-45 2024.txt",
+        "audio": "none"
+    },
+    "s3d2_ter1": {
+        "logs": "soundwalking_data_clean/logs/s3d2_ter1 drawing log - Thu Oct 10 11-32-37 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s3d2_ter1.mp3"
+    },
+    "s3d2_ter1_score": {
+        "logs": "soundwalking_data_clean/logs/s3d2_ter1_score0 drawing log - Thu Oct 10 13-12-08 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s3d2_score1.mp3"
+    },
+    "s3d2_ter2": {
+        "logs": "soundwalking_data_clean/logs/s3d2_ter2 drawing log - Thu Oct 10 11-39-10 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s3d2_ter2.mp3"
+    },
+    "s3d2_ter2_score": {
+        "logs": "soundwalking_data_clean/logs/s3d2_ter2_score0 drawing log - Thu Oct 10 13-12-05 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s3d2_score2.mp3"
+    },
+    "s3d3_bodyscan": {
+        "logs": "soundwalking_data_clean/logs/s3d3_bodyscan drawing log - Thu Oct 10 11-25-53 2024.txt",
+        "audio": "none"
+    },
+    "s3d3_ter1": {
+        "logs": "soundwalking_data_clean/logs/s3d3_ter1 drawing log - Thu Oct 10 11-32-44 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s3d3_ter1.mp3"
+    },
+    "s3d3_ter1_score": {
+        "logs": "soundwalking_data_clean/logs/s3d3_ter1_score8 drawing log - Thu Oct 10 13-24-44 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s3d3_score1.mp3"
+    },
+    "s3d3_ter2": {
+        "logs": "soundwalking_data_clean/logs/s3d3_ter2 drawing log - Thu Oct 10 11-39-17 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s3d3_ter2.mp3"
+    },
+    "s3d3_ter2_score": {
+        "logs": "soundwalking_data_clean/logs/s3d3_ter2_score34 drawing log - Thu Oct 10 13-24-41 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s3d3_score2.mp3"
+    },
+    "s4d1_ter1": {
+        "logs": "soundwalking_data_clean/logs/s4d1_ter1 drawing log - Thu Oct 10 16-18-09 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s4d1_ter1.mp3"
+    },
+    "s4d1_ter1_score": {
+        "logs": "soundwalking_data_clean/logs/s4d1_ter1_score6 drawing log - Thu Oct 10 17-26-18 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s4d1_score1.mp3"
+    },
+    "s4d1_ter2": {
+        "logs": "soundwalking_data_clean/logs/s4d1_ter2 drawing log - Thu Oct 10 16-24-37 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s4d1_ter2.mp3"
+    },
+    "s4d1_ter2_score": {
+        "logs": "soundwalking_data_clean/logs/s4d1_ter2_score4 drawing log - Thu Oct 10 17-26-14 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s4d1_score2.mp3"
+    },
+    "s4d2_ter1": {
+        "logs": "soundwalking_data_clean/logs/s4d2_ter1 drawing log - Thu Oct 10 16-18-00 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s4d2_ter1.mp3"
+    },
+    "s4d2_ter1_score": {
+        "logs": "soundwalking_data_clean/logs/s4d2_ter1_score4 drawing log - Thu Oct 10 17-26-16 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s4d2_score1.mp3"
+    },
+    "s4d2_ter2": {
+        "logs": "soundwalking_data_clean/logs/s4d2_ter2 drawing log - Thu Oct 10 16-24-28 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s4d2_ter2.mp3"
+    },
+    "s4d2_ter2_score": {
+        "logs": "soundwalking_data_clean/logs/s4d2_ter2_score4 drawing log - Thu Oct 10 17-26-13 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s4d2_score2.mp3"
+    },
+    "s4d3_ter1": {
+        "logs": "soundwalking_data_clean/logs/s4d3_ter1 drawing log - Thu Oct 10 16-18-07 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s4d3_ter1.mp3"
+    },
+    "s4d3_ter1_score": {
+        "logs": "soundwalking_data_clean/logs/s4d3_ter1_score1 drawing log - Thu Oct 10 17-26-32 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s4d3_score1.mp3"
+    },
+    "s4d3_ter2": {
+        "logs": "soundwalking_data_clean/logs/s4d3_ter2 drawing log - Thu Oct 10 16-24-35 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s4d3_ter2.mp3"
+    },
+    "s4d3_ter2_score": {
+        "logs": "soundwalking_data_clean/logs/s4d3_ter2_score4 drawing log - Thu Oct 10 17-26-29 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s4d3_score2.mp3"
+    },
+    "s5d1_bodyscan": {
+        "logs": "soundwalking_data_clean/logs/s5d1_bodyscan drawing log - Fri Oct 11 13-25-37 2024.txt",
+        "audio": "none"
+    },
+    "s5d1_ter1": {
+        "logs": "soundwalking_data_clean/logs/s5d1_ter1 drawing log - Fri Oct 11 13-32-55 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s5d1_ter1.mp3"
+    },
+    "s5d1_ter1_score": {
+        "logs": "soundwalking_data_clean/logs/s5d1_ter1_score3 drawing log - Fri Oct 11 14-55-31 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s5d1_score1.mp3"
+    },
+    "s5d1_ter2": {
+        "logs": "soundwalking_data_clean/logs/s5d1_ter2 drawing log - Fri Oct 11 13-39-07 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s5d1_ter2.mp3"
+    },
+    "s5d1_ter2_score": {
+        "logs": "soundwalking_data_clean/logs/s5d1_ter2_score1 drawing log - Fri Oct 11 14-55-25 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s5d1_score2.mp3"
+    },
+    "s5d2_bodyscan": {
+        "logs": "soundwalking_data_clean/logs/s5d2_bodyscan drawing log - Fri Oct 11 13-25-23 2024.txt",
+        "audio": "none"
+    },
+    "s5d2_ter1": {
+        "logs": "soundwalking_data_clean/logs/s5d2_ter1 drawing log - Fri Oct 11 13-32-40 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s5d2_ter1.mp3"
+    },
+    "s5d2_ter1_score": {
+        "logs": "soundwalking_data_clean/logs/s5d2_ter1_score7 drawing log - Fri Oct 11 14-10-18 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s5d2_score1.mp3"
+    },
+    "s5d2_ter2": {
+        "logs": "soundwalking_data_clean/logs/s5d2_ter2 drawing log - Fri Oct 11 13-38-52 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s5d2_ter2.mp3"
+    },
+    "s5d2_ter2_score": {
+        "logs": "soundwalking_data_clean/logs/s5d2_ter2_score5 drawing log - Fri Oct 11 14-39-42 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s5d2_score2.mp3"
+    },
+    "s5d3_bodyscan": {
+        "logs": "soundwalking_data_clean/logs/s5d3_bodyscan drawing log - Fri Oct 11 13-25-33 2024.txt",
+        "audio": "none"
+    },
+    "s5d3_ter1": {
+        "logs": "soundwalking_data_clean/logs/s5d3_ter1 drawing log - Fri Oct 11 13-32-50 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s5d3_ter1.mp3"
+    },
+    "s5d3_ter1_score": {
+        "logs": "soundwalking_data_clean/logs/s5d3_ter1_score1 drawing log - Fri Oct 11 14-49-31 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s5d3_score1.mp3"
+    },
+    "s5d3_ter2": {
+        "logs": "soundwalking_data_clean/logs/s5d3_ter2 drawing log - Fri Oct 11 13-39-03 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s5d3_ter2.mp3"
+    },
+    "s5d3_ter2_score": {
+        "logs": "soundwalking_data_clean/logs/s5d3_ter2_score1 drawing log - Fri Oct 11 14-49-28 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s5d3_score2.mp3"
+    },
+    "s6d1_bodyscan": {
+        "logs": "soundwalking_data_clean/logs/s6d1_bodyscan drawing log - Fri Oct 11 16-12-22 2024.txt",
+        "audio": "none"
+    },
+    "s6d1_ter1": {
+        "logs": "soundwalking_data_clean/logs/s6d1_ter1 drawing log - Fri Oct 11 16-19-08 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s6d1_ter1.mp3"
+    },
+    "s6d1_ter1_score": {
+        "logs": "soundwalking_data_clean/logs/s6d1_ter1_score17 drawing log - Fri Oct 11 17-49-12 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s6d1_score1.mp3"
+    },
+    "s6d1_ter2": {
+        "logs": "soundwalking_data_clean/logs/s6d1_ter2 drawing log - Fri Oct 11 16-25-37 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s6d1_ter2.mp3"
+    },
+    "s6d1_ter2_score": {
+        "logs": "soundwalking_data_clean/logs/s6d1_ter2_score1 drawing log - Fri Oct 11 17-49-09 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s6d1_score2.mp3"
+    },
+    "s6d2_bodyscan": {
+        "logs": "soundwalking_data_clean/logs/s6d2_bodyscan drawing log - Fri Oct 11 16-12-08 2024.txt",
+        "audio": "none"
+    },
+    "s6d2_ter1": {
+        "logs": "soundwalking_data_clean/logs/s6d2_ter1 drawing log - Fri Oct 11 16-18-54 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s6d2_ter1.mp3"
+    },
+    "s6d2_ter1_score": {
+        "logs": "soundwalking_data_clean/logs/s6d2_ter1_score1 drawing log - Fri Oct 11 16-57-43 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s6d2_score1.mp3"
+    },
+    "s6d2_ter2": {
+        "logs": "soundwalking_data_clean/logs/s6d2_ter2 drawing log - Fri Oct 11 16-25-22 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s6d2_ter2.mp3"
+    },
+    "s6d2_ter2_score": {
+        "logs": "soundwalking_data_clean/logs/s6d2_ter2_score1 drawing log - Fri Oct 11 17-30-17 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s6d2_score2.mp3"
+    },
+    "s6d3_bodyscan": {
+        "logs": "soundwalking_data_clean/logs/s6d3_bodyscan drawing log - Fri Oct 11 16-12-18 2024.txt",
+        "audio": "none"
+    },
+    "s6d3_ter1": {
+        "logs": "soundwalking_data_clean/logs/s6d3_ter1 drawing log - Fri Oct 11 16-19-04 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s6d3_ter1.mp3"
+    },
+    "s6d3_ter1_score": {
+        "logs": "soundwalking_data_clean/logs/s6d3_ter1_score0 drawing log - Fri Oct 11 16-57-33 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s6d3_score1.mp3"
+    },
+    "s6d3_ter2": {
+        "logs": "soundwalking_data_clean/logs/s6d3_ter2 drawing log - Fri Oct 11 16-25-33 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s6d3_ter2.mp3"
+    },
+    "s6d3_ter2_score": {
+        "logs": "soundwalking_data_clean/logs/s6d3_ter2_score0 drawing log - Fri Oct 11 17-06-40 2024.txt",
+        "audio": "soundwalking_data_clean/audio/a_s6d3_score2.mp3"
+    }
+}

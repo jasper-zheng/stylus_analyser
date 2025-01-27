@@ -4,15 +4,17 @@ let events = [];
 
 let cur_page = 0;
 let cur_task = 2;
-let cur_log = "s1d3_ter2_score4"
+let cur_log = "s1d3_ter2_score"
 
 let to_trace = false;
+
+let audioPlayer;
 
 // ==========================
 // constants:
 
 const width_base = 0.01;
-const width_scale = 3.0;
+const width_scale = 2.4;
 const fading_speed = 0.007;
 const fading_min = 0.06;
 
@@ -29,17 +31,19 @@ const tasks = ['body scanning', 'exploring', 'scoring']
 var selectTaskDOM = []
 var selectSessionDOM = []
 
-// ==========================
+
+
+
 
 function preload() {
 	// put setup code here
-	loadJSON('../../../../../data/files.json', handleJSON);
+	loadJSON('../../../../../data/files_clean.json', handleJSON);
 }
 
 function handleJSON(data){
 	file_list = data;
-	console.log(file_list['s1d3_ter2_score4']);
-	lines = loadStrings('../../../../../data/' + file_list['s1d3_ter2_score4'], parseLogs);
+	console.log(file_list['s1d3_ter2_score']['logs']);
+	lines = loadStrings('../../../../../data/' + file_list['s1d3_ter2_score']['logs'], parseLogs);
 }
 
 function parseLogs(data){
@@ -98,6 +102,9 @@ function setup() {
 
     console.log(events)
 
+    // ===========================================
+    // controllers:
+
     tasks.forEach((task,index) =>{
     	const option = document.createElement("div");
     	option.setAttribute('class', cur_task == index ? 'ct_div actived' : 'ct_div');
@@ -129,11 +136,12 @@ function setup() {
 		    	dom.setAttribute('class', cur_log == dom.textContent ? 'ct_div actived' : 'ct_div');
 		    })
 		    to_trace = true;
-		    lines = loadStrings('../../../../../data/' + file_list[cur_log], parseLogs);
+		    lines = loadStrings('../../../../../data/' + file_list[cur_log]['logs'], parseLogs);
         }
     });
 
     // ===========================================
+    // draw:
 
     listPages();
 
@@ -142,6 +150,41 @@ function setup() {
         trace();
     });
     
+
+	// ==========================
+	// player: 
+	// const audioPlayer = document.getElementById('audioPlayer');
+	// const playButton = document.getElementById('playButton');
+	// const pauseButton = document.getElementById('pauseButton');
+	// const seekBar = document.getElementById('seekBar');
+	// audioPlayer.src = "../../../../../data/soundwalking_data_clean/audio/a_s1d2_ter1.mp3";
+  	// audioPlayer.load();
+
+	// // Play the audio
+	// playButton.addEventListener('click', () => {
+	//     audioPlayer.play();
+	// });
+	audioPlayer = createAudio('../../../../../data/soundwalking_data_clean/audio/piano-loop.mp3');
+	audioPlayer.attribute(
+		'aria-description',
+		'The playback speed of this audio player is controlled by the position of the mouse. The further to the right the mouse is, the faster the audio will play.'
+	);
+	audioPlayer.showControls();
+	// Pause the audio
+	// pauseButton.addEventListener('click', () => {
+	//     audioPlayer.pause();
+	// });
+
+	// Update the slider as the audio plays
+	// audioPlayer.addEventListener('timeupdate', () => {
+	//     seekBar.max = audioPlayer.duration || 0;
+	//     seekBar.value = audioPlayer.currentTime || 0;
+	// });
+
+	// Seek to a specific time in the audio when the slider is moved
+	// seekBar.addEventListener('input', () => {
+	//     audioPlayer.currentTime = seekBar.value;
+	// });
 }
 
 function listLogs(){
