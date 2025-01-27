@@ -8,7 +8,7 @@ let cur_log = "s1d3_ter2_score"
 
 let to_trace = false;
 
-let audioPlayer;
+
 
 // ==========================
 // constants:
@@ -32,12 +32,20 @@ var selectTaskDOM = []
 var selectSessionDOM = []
 
 
-
-
+// ==========================
+// player: 
+// const audioPlayer = document.getElementById('audioPlayer');
+let audioPlayer;
+let playButton;
+let pauseButton;
+let seekBar;
+let curTime, durTime;
 
 function preload() {
 	// put setup code here
 	loadJSON('../../../../../data/files_clean.json', handleJSON);
+	audioPlayer = createAudio('../../../../../data/soundwalking_data_clean/audio/a_s1d2_ter1.mp3');
+    
 }
 
 function handleJSON(data){
@@ -150,30 +158,29 @@ function setup() {
         trace();
     });
     
+    // ===========================================
+    // audio:
 
-	// ==========================
-	// player: 
-	// const audioPlayer = document.getElementById('audioPlayer');
-	// const playButton = document.getElementById('playButton');
-	// const pauseButton = document.getElementById('pauseButton');
-	// const seekBar = document.getElementById('seekBar');
-	// audioPlayer.src = "../../../../../data/soundwalking_data_clean/audio/a_s1d2_ter1.mp3";
-  	// audioPlayer.load();
 
-	// // Play the audio
-	// playButton.addEventListener('click', () => {
-	//     audioPlayer.play();
-	// });
-	audioPlayer = createAudio('../../../../../data/soundwalking_data_clean/audio/piano-loop.mp3');
-	audioPlayer.attribute(
-		'aria-description',
-		'The playback speed of this audio player is controlled by the position of the mouse. The further to the right the mouse is, the faster the audio will play.'
-	);
-	audioPlayer.showControls();
-	// Pause the audio
-	// pauseButton.addEventListener('click', () => {
-	//     audioPlayer.pause();
-	// });
+    playButton = document.getElementById('playButton');
+	pauseButton = document.getElementById('pauseButton');
+	seekBar = document.getElementById('seekBar');
+	curTime = document.getElementById('curTime');
+	durTime = document.getElementById('durTime');
+
+    // audioPlayer = createAudio('../../../../../data/soundwalking_data_clean/audio/a_s1d2_ter1.mp3', function(){
+    // 	// audioPlayer = p
+    // 	durTime.innerHTML = audioPlayer.duration();
+    // });
+    
+	durTime.innerHTML = audioPlayer.duration();
+	// Play the audio
+	playButton.addEventListener('click', () => {
+	    audioPlayer.play();
+	});
+	pauseButton.addEventListener('click', () => {
+	    audioPlayer.pause();
+	});
 
 	// Update the slider as the audio plays
 	// audioPlayer.addEventListener('timeupdate', () => {
@@ -185,6 +192,7 @@ function setup() {
 	// seekBar.addEventListener('input', () => {
 	//     audioPlayer.currentTime = seekBar.value;
 	// });
+
 }
 
 function listLogs(){
@@ -272,5 +280,5 @@ function trace() {
 
 function draw() {
   // put drawing code here
-	
+	curTime.innerHTML = audioPlayer.time()
 }

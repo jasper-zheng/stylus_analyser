@@ -16,12 +16,13 @@ Participants who completed at least one score for each terrain were asked to dem
 <div id="canvasContainer"></div>
 <div id="canvasControls">
 	<select id="selectPage"></select>
-	<!-- <audio id="audioPlayer"></audio>
+	<!-- <audio id="audioPlayer"></audio> -->
     <div class="controls">
+    	<div><span id="curTime"></span> - <span id="durTime"></span></div>
         <button id="playButton">Play</button>
         <button id="pauseButton">Pause</button>
     </div>
-    <input type="range" id="seekBar" value="0" min="0" max="100"> -->
+    <input type="range" id="seekBar" value="0" min="0" max="100">
 	<table style="width:100%">
 		<td id="selectTask" width="200px">
 		</td>
