@@ -34,8 +34,8 @@ var selectSessionDOM = []
 
 // ==========================
 // player: 
-// const audioPlayer = document.getElementById('audioPlayer');
 let audioPlayer;
+// let audioPlayer;
 let playButton;
 let pauseButton;
 let seekBar;
@@ -44,8 +44,7 @@ let curTime, durTime;
 function preload() {
 	// put setup code here
 	loadJSON('../../../../../data/files_clean.json', handleJSON);
-	audioPlayer = createAudio('../../../../../data/soundwalking_data_clean/audio/a_s1d2_ter1.mp3');
-    
+	// audioPlayer = createAudio('../../../../../data/soundwalking_data_clean/audio/a_s1d2_ter1.mp3');
 }
 
 function handleJSON(data){
@@ -160,7 +159,9 @@ function setup() {
     
     // ===========================================
     // audio:
-
+    audioPlayer = document.getElementById('audioPlayer')
+    audioPlayer.src='../../../../../data/soundwalking_data_clean/audio/a_s1d2_ter1.mp3'
+    audioPlayer.load();
 
     playButton = document.getElementById('playButton');
 	pauseButton = document.getElementById('pauseButton');
@@ -173,7 +174,10 @@ function setup() {
     // 	durTime.innerHTML = audioPlayer.duration();
     // });
     
-	durTime.innerHTML = audioPlayer.duration();
+	// durTime.innerHTML = (audioPlayer.duration||0).toFixed(5);
+	audioPlayer.addEventListener('canplaythrough', function(){
+		durTime.innerHTML = (audioPlayer.duration||0).toFixed(5);
+	}, false);
 	// Play the audio
 	playButton.addEventListener('click', () => {
 	    audioPlayer.play();
@@ -184,8 +188,8 @@ function setup() {
 
 	// Update the slider as the audio plays
 	// audioPlayer.addEventListener('timeupdate', () => {
-	//     seekBar.max = audioPlayer.duration || 0;
-	//     seekBar.value = audioPlayer.currentTime || 0;
+	//     // seekBar.max = audioPlayer.duration || 0;
+	//     // seekBar.value = audioPlayer.currentTime || 0;
 	// });
 
 	// Seek to a specific time in the audio when the slider is moved
@@ -280,5 +284,5 @@ function trace() {
 
 function draw() {
   // put drawing code here
-	curTime.innerHTML = audioPlayer.time()
+	curTime.innerHTML = audioPlayer.currentTime.toFixed(5)
 }

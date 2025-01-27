@@ -9,8 +9,43 @@ td{
 	cursor: pointer;
 }
 .ct_div:hover{
-	opacity: 0.5;
+	opacity: 0.6;
 }
 .actived{
   text-decoration: underline;
+}
+
+.timeStamp{
+	display: inline-block;
+	width: 100px;
+/*	height: 1em;*/
+	padding-top: 0.8em;
+	padding-bottom: 0.5em;
+}
+.timeStampLabel{
+	
+	font-size: 0.8em;
+}
+
+#seekBar{
+	width: 100%;
+
+	-webkit-appearance: none;
+  appearance: none;
+  background: rgb(200,200,200);
+  cursor: pointer;
+  height: 10px;
+  margin-bottom: 2em;
+  transition: background .2s;
+}
+#seekBar:hover{
+	background: rgb(180,180,180);
+}
+#seekBar::-webkit-slider-thumb {
+   -webkit-appearance: none; /* Override default look */
+   appearance: none;
+/*   margin-top: -12px;*/
+   background-color: rgb(244,160,86);
+   height: 1rem;
+   width: 0.2rem;    
 }
