@@ -2,7 +2,8 @@ let file_list;
 let lines;
 let events = [];
 
-let current_page = 0;
+let cur_page = 0;
+let cur_task = 2;
 
 // ==========================
 // constants:
@@ -13,6 +14,17 @@ const fading_speed = 0.007;
 const fading_min = 0.06;
 
 var canvas_width = 745
+
+// ==========================
+// lists:
+
+const tasks = ['body scanning', 'exploring', 'scoring']
+
+// ==========================
+// elements
+
+var selectTaskDOM = []
+var selectSessionDOM = []
 
 // ==========================
 
@@ -56,7 +68,7 @@ function parseLogs(data){
 			page_count = page_count+1;
 		}
 	})
-	current_page = events.length - 1;
+	cur_page = events.length - 1;
 }
 
 function windowResized(){
@@ -71,6 +83,8 @@ function setup() {
 	console.log('setting');
 	var canvas_div = document.getElementById("canvasContainer");
 	var selectPage = document.getElementById("selectPage");
+	var selectTask = document.getElementById("selectTask");
+	var selectSession = document.getElementById("selectSession");
 
     var canvas = createCanvas(canvas_width,canvas_width/760*400);
 	canvas.parent('canvasContainer');
@@ -86,14 +100,58 @@ function setup() {
     	selectPage.appendChild(option);
     }
 
-    console.log(`Selected item: ${current_page}`);
+    console.log(`Selected item: ${cur_page}`);
     trace();
 
     selectPage.addEventListener('change', function() {
-        current_page = this.value;
-        // console.log("Selected item: " + current_page)
+        cur_page = this.value;
         trace();
     });
+
+
+    tasks.forEach((task,index) =>{
+    	const option = document.createElement("div");
+    	option.setAttribute('class', cur_task == index ? 'ct_div actived' : 'ct_div');
+    	option.setAttribute('value',index);
+    	option.innerHTML = task;
+    	selectTask.appendChild(option);
+    	selectTaskDOM.push(option)
+    })
+
+    selectTask.addEventListener('click', function(e) {
+        // Check if the clicked element is a table cell
+        if (e.target.tagName === 'DIV') {
+            // console.log(`You clicked: ${e.target.getAttribute('value')}`);
+            cur_task = e.target.getAttribute('value')
+            selectTaskDOM.forEach((dom,index) =>{
+		    	dom.setAttribute('class', cur_task == index ? 'ct_div actived' : 'ct_div');
+		    })
+        }
+    });
+
+    Object.entries(file_list).forEach(([log, file_path]) => {
+    	console.log(log);
+
+    	// const option = document.createElement("div");
+    	// option.setAttribute('class', cur_task == index ? 'ct_div actived' : 'ct_div');
+    	// option.setAttribute('value',index);
+    	// option.innerHTML = task;
+    	// selectTask.appendChild(option);
+    	// selectTaskDOM.push(option)
+    });
+
+    // selectTask.addEventListener('click', function(e) {
+    //     // Check if the clicked element is a table cell
+    //     if (e.target.tagName === 'DIV') {
+    //         // console.log(`You clicked: ${e.target.getAttribute('value')}`);
+    //         cur_task = e.target.getAttribute('value')
+    //         selectTaskDOM.forEach((dom,index) =>{
+	// 	    	dom.setAttribute('class', cur_task == index ? 'ct_div actived' : 'ct_div');
+	// 	    })
+    //     }
+    // });
+
+    // ===========================================
     
 }
 
@@ -101,15 +159,15 @@ function trace() {
 	scale(canvas_width/760)
 	background(20);
 	strokeCap(SQUARE);
-	// console.log(current_page)
+	// console.log(cur_page)
 
 	let ink = 1.0;
 	let ink_now = 1.0;
 	let startX, startY, prevX, prevY, anchorX, anchorY;
 	prevX = 0.0;
 	prevY = 0.0;
-	for (let i = events[current_page].length; i > 0; i--){
-		const phase = events[current_page][i-1];
+	for (let i = events[cur_page].length; i > 0; i--){
+		const phase = events[cur_page][i-1];
 		if (phase.decay){
 			ink -= fading_speed;
 			ink_now = Math.max(fading_min, ink);
@@ -122,7 +180,7 @@ function trace() {
 		anchorX = phase.x;
         anchorY = phase.y;
 
-		if ((i == events[current_page].length)||(phase.event=="up")){
+		if ((i == events[cur_page].length)||(phase.event=="up")){
 			startX = phase.x;
 			startY = phase.y;
 		} else {

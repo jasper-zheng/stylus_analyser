@@ -9,16 +9,19 @@ excerpt: Participants were asked to explore and find pieces of sound or music in
 ---
 
 
-hi Participants were asked to explore and find pieces of sound or music in each terrain, and then draw a “score” on the canvas to help them perform these pieces. They were encouraged to be creative and use any kinds of notation (graphical/textual) in the score... Participants were asked to explore and find pieces of sound or music in each terrain, and then draw a “score” on the canvas to help them perform these pieces. They were encouraged to be creative and use any kinds of notation (graphical/textual) in the score... Participants were asked to explore and find pieces of sound or music in each terrain, and then draw a “score” on the canvas to help them perform these pieces. They were encouraged to be creative and use any kinds of notation (graphical/textual) in the score...
+In a 20-minute (10 minutes for each terrain) score creation section, participants were asked to explore and find pieces of sound or music in each terrain, and then draw a ``score'' on the canvas to help them perform these pieces. They were encouraged to be creative and use any kind of notation (graphical/textual) in the score. We did not limit the duration of the pieces. 
+
+Participants who completed at least one score for each terrain were asked to demonstrate their scores to the investigator and the other two participants. They were asked to describe: (i) what they have created, (ii) how they would use their scores, and (iii) how they came up with their scores. After their demonstration, the investigator started open-ended conversations to elicit descriptive narratives of why they chose to use the techniques in their score and their overall experience of the instrument.
 
 <div id="canvasContainer"></div>
 <div id="canvasControls">
-	<select id="selectPage">
-<!--         <option value="Option 1">Option 1</option>
-        <option value="Option 2">Option 2</option>
-        <option value="Option 3">Option 3</option>
-        <option value="Option 4">Option 4</option> -->
-    </select>
-
+	<table style="width:100%">
+		<td id="selectTask" width="200px">
+		</td>
+		<td id="selectSession">
+			<div class="ct_div">1</div>
+		</td>
+	</table>
+	<select id="selectPage"></select>
 </div>
 aaaa
