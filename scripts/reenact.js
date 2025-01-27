@@ -44,7 +44,6 @@ let curTime, durTime;
 function preload() {
 	// put setup code here
 	loadJSON('../../../../../data/files_clean.json', handleJSON);
-	// audioPlayer = createAudio('../../../../../data/soundwalking_data_clean/audio/a_s1d2_ter1.mp3');
 }
 
 function handleJSON(data){
@@ -145,6 +144,8 @@ function setup() {
 		    to_trace = true;
 		    lines = loadStrings('../../../../../data/' + file_list[cur_log]['logs'], parseLogs);
         }
+        audioPlayer.src='../../../../../data/' + file_list[cur_log]['audio']
+    	audioPlayer.load();
     });
 
     // ===========================================
@@ -160,24 +161,21 @@ function setup() {
     // ===========================================
     // audio:
     audioPlayer = document.getElementById('audioPlayer')
-    audioPlayer.src='../../../../../data/soundwalking_data_clean/audio/a_s1d2_ter1.mp3'
-    audioPlayer.load();
-
     playButton = document.getElementById('playButton');
 	pauseButton = document.getElementById('pauseButton');
 	seekBar = document.getElementById('seekBar');
 	curTime = document.getElementById('curTime');
 	durTime = document.getElementById('durTime');
 
-    // audioPlayer = createAudio('../../../../../data/soundwalking_data_clean/audio/a_s1d2_ter1.mp3', function(){
-    // 	// audioPlayer = p
-    // 	durTime.innerHTML = audioPlayer.duration();
-    // });
-    
-	// durTime.innerHTML = (audioPlayer.duration||0).toFixed(5);
+
+    audioPlayer.src='../../../../../data/' + file_list[cur_log]['audio']
+    audioPlayer.load();
 	audioPlayer.addEventListener('canplaythrough', function(){
-		durTime.innerHTML = (audioPlayer.duration||0).toFixed(5);
+		console.log('canplaythrough')
+		durTime.innerHTML = (audioPlayer.duration||0).toFixed(3);
+		seekBar.max = audioPlayer.duration||0;
 	}, false);
+
 	// Play the audio
 	playButton.addEventListener('click', () => {
 	    audioPlayer.play();
@@ -187,15 +185,14 @@ function setup() {
 	});
 
 	// Update the slider as the audio plays
-	// audioPlayer.addEventListener('timeupdate', () => {
-	//     // seekBar.max = audioPlayer.duration || 0;
-	//     // seekBar.value = audioPlayer.currentTime || 0;
-	// });
+	audioPlayer.addEventListener('timeupdate', () => {
+	    seekBar.value = audioPlayer.currentTime || 0;
+	});
 
 	// Seek to a specific time in the audio when the slider is moved
-	// seekBar.addEventListener('input', () => {
-	//     audioPlayer.currentTime = seekBar.value;
-	// });
+	seekBar.addEventListener('input', () => {
+	    audioPlayer.currentTime = seekBar.value;
+	});
 
 }
 
@@ -284,5 +281,5 @@ function trace() {
 
 function draw() {
   // put drawing code here
-	curTime.innerHTML = audioPlayer.currentTime.toFixed(5)
+	curTime.innerHTML = audioPlayer.currentTime.toFixed(3)
 }

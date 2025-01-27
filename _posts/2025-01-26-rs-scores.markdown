@@ -22,7 +22,7 @@ Participants who completed at least one score for each terrain were asked to dem
     <div class="controls">
     	<div>
     		<div class="timeStamp">
-    			<div class="timeStampLabel">Current Time</div>
+    			<div class="timeStampLabel">Playhead</div>
     			<div id="curTime"></div>
     		</div>
     		<div class="timeStamp">
