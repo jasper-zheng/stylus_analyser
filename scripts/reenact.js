@@ -4,6 +4,9 @@ let events = [];
 
 let cur_page = 0;
 let cur_task = 2;
+let cur_log = "s1d3_ter2_score4"
+
+let to_trace = false;
 
 // ==========================
 // constants:
@@ -35,15 +38,15 @@ function preload() {
 
 function handleJSON(data){
 	file_list = data;
-	console.log(file_list['s1d1_ter1_score9']);
-	lines = loadStrings('../../../../../data/' + file_list['s1d1_ter1_score9'], parseLogs);
+	console.log(file_list['s1d3_ter2_score4']);
+	lines = loadStrings('../../../../../data/' + file_list['s1d3_ter2_score4'], parseLogs);
 }
 
 function parseLogs(data){
 	var page_count = 0;
-	var first_page_idx = parseInt(lines[0].split(',')[0]);
 	var this_page = [];
-	lines.forEach((line_str, index) => {
+	events = []
+	data.forEach((line_str, index) => {
 		var line_data = line_str.split(',');
 		var e = {
 			page:parseInt(line_data[0]),
@@ -59,7 +62,7 @@ function parseLogs(data){
 		}
 		if (e.page==page_count){
 			this_page.push(e);
-			if (index == lines.length - 1){
+			if (index == data.length - 1){
 				events.push(this_page);
 			}
 		} else {
@@ -69,6 +72,10 @@ function parseLogs(data){
 		}
 	})
 	cur_page = events.length - 1;
+	if (to_trace){
+		listPages();
+		to_trace = false;
+	}
 }
 
 function windowResized(){
@@ -90,24 +97,6 @@ function setup() {
 	canvas.parent('canvasContainer');
 
     console.log(events)
-    for (let i = 0; i < events.length; i++){
-    	const option = document.createElement("option");
-    	option.setAttribute('value',i);
-    	option.innerHTML = i;
-    	if (i==events.length-1){
-    		option.setAttribute('selected','selected');
-    	}
-    	selectPage.appendChild(option);
-    }
-
-    console.log(`Selected item: ${cur_page}`);
-    trace();
-
-    selectPage.addEventListener('change', function() {
-        cur_page = this.value;
-        trace();
-    });
-
 
     tasks.forEach((task,index) =>{
     	const option = document.createElement("div");
@@ -126,33 +115,76 @@ function setup() {
             selectTaskDOM.forEach((dom,index) =>{
 		    	dom.setAttribute('class', cur_task == index ? 'ct_div actived' : 'ct_div');
 		    })
+		    listLogs()
         }
     });
 
-    Object.entries(file_list).forEach(([log, file_path]) => {
-    	console.log(log);
+    listLogs()
 
-    	// const option = document.createElement("div");
-    	// option.setAttribute('class', cur_task == index ? 'ct_div actived' : 'ct_div');
-    	// option.setAttribute('value',index);
-    	// option.innerHTML = task;
-    	// selectTask.appendChild(option);
-    	// selectTaskDOM.push(option)
+    selectSession.addEventListener('click', function(e) {
+        // Check if the clicked element is a table cell
+        if (e.target.tagName === 'DIV') {
+            cur_log = e.target.textContent
+            selectSessionDOM.forEach((dom,index) =>{
+		    	dom.setAttribute('class', cur_log == dom.textContent ? 'ct_div actived' : 'ct_div');
+		    })
+		    to_trace = true;
+		    lines = loadStrings('../../../../../data/' + file_list[cur_log], parseLogs);
+        }
     });
 
-    // selectTask.addEventListener('click', function(e) {
-    //     // Check if the clicked element is a table cell
-    //     if (e.target.tagName === 'DIV') {
-    //         // console.log(`You clicked: ${e.target.getAttribute('value')}`);
-    //         cur_task = e.target.getAttribute('value')
-    //         selectTaskDOM.forEach((dom,index) =>{
-	// 	    	dom.setAttribute('class', cur_task == index ? 'ct_div actived' : 'ct_div');
-	// 	    })
-    //     }
-    // });
-
     // ===========================================
+
+    listPages();
+
+    selectPage.addEventListener('change', function() {
+        cur_page = this.value;
+        trace();
+    });
     
+}
+
+function listLogs(){
+	selectSession.innerHTML = '';
+	selectSessionDOM = [];
+	Object.entries(file_list).forEach(([log, file_path]) => {
+		if (cur_task == 0){
+			if (log.includes("bodyscan")){
+				addDOM(log)
+			}
+		} else if (cur_task == 1){
+			if ((!log.includes("bodyscan")&&(!log.includes("score")))) {
+				addDOM(log)
+			}
+		} else {
+			if (log.includes("score")){
+				addDOM(log)
+			}
+		}
+    });
+}
+
+function addDOM(log_name){
+	const option = document.createElement("div");
+	option.setAttribute('class', cur_log == log_name ? 'ct_div actived' : 'ct_div');
+	option.innerHTML = log_name;
+	selectSession.appendChild(option);
+	selectSessionDOM.push(option)
+}
+
+function listPages(){
+	selectPage.innerHTML = '';
+    for (let i = 0; i < events.length; i++){
+    	const option = document.createElement("option");
+    	option.setAttribute('value',i);
+    	option.innerHTML = i;
+    	if (i==events.length-1){
+    		option.setAttribute('selected','selected');
+    	}
+    	selectPage.appendChild(option);
+    }
+
+    trace();
 }
 
 function trace() {
