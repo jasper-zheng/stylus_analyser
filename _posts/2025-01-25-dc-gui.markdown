@@ -7,3 +7,32 @@ categories: jekyll update
 type: Data Collections
 excerpt: Each workshop activity has a Graphical User Interface (GUI) page displaying relevant information, instructions, and the instrument’s user interface. The investigator’s laptop controls the switching between GUI pages and switching between terrains in participants’ instrument...
 ---
+
+Each workshop activity has a Graphical User Interface (GUI) page displaying relevant information, instructions, and the instrument’s user interface. The investigator’s laptop controls the switching between GUI pages and switching between terrains in participants’ instrument. 
+
+1. Pre-task survey
+![img](../../../../../media/gui/1.jpg)
+
+2. Warm-up  
+![img](../../../../../media/gui/2.jpg)
+
+3. Body-scan
+![img](../../../../../media/gui/3.jpg)
+
+4. Instructions for the exploration activities
+![img](../../../../../media/gui/4.jpg)
+
+5. Exploration
+![img](../../../../../media/gui/5.jpg)
+
+6. Interview 1
+![img](../../../../../media/gui/6.jpg)
+
+7. Instructions for the score creation activities
+![img](../../../../../media/gui/7.jpg)
+
+8. Score creation
+![img](../../../../../media/gui/8.jpg)
+
+9. Interview 2
+![img](../../../../../media/gui/9.jpg)

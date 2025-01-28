@@ -5,15 +5,20 @@ date:   2025-01-24 13:15:45 +0000
 chapter: Chapter 5.2
 categories: jekyll update
 type: Results
+has_logs: true
 excerpt: Participants were asked to explore and find pieces of sound or music in each terrain, and then draw a “score” on the canvas to help them perform these pieces. They were encouraged to be creative and use any kinds of notation (graphical/textual) in the score...
 ---
 
 
-In a 20-minute (10 minutes for each terrain) score creation section, participants were asked to explore and find pieces of sound or music in each terrain, and then draw a ``score'' on the canvas to help them perform these pieces. They were encouraged to be creative and use any kind of notation (graphical/textual) in the score. We did not limit the duration of the pieces. 
+In a 20-minute (10 minutes for each terrain) score creation section, participants were asked to explore and find pieces of sound or music in each terrain, and then draw a “score” on the canvas to help them perform these pieces. They were encouraged to be creative and use any kind of notation (graphical/textual) in the score. We did not limit the duration of the pieces. 
 
 Participants who completed at least one score for each terrain were asked to demonstrate their scores to the investigator and the other two participants. They were asked to describe: (i) what they have created, (ii) how they would use their scores, and (iii) how they came up with their scores. After their demonstration, the investigator started open-ended conversations to elicit descriptive narratives of why they chose to use the techniques in their score and their overall experience of the instrument.
 
 <div id="canvasContainer"></div>
+<div id="timelineContainer"></div>
+<div>
+	<input type="range" id="seekBar" value="0" min="0" max="100" step="0.01">
+</div>
 <div id="canvasControls">
 	<select id="selectPage"></select>
 	<button id="playButton">Play</button>
@@ -31,11 +36,11 @@ Participants who completed at least one score for each terrain were asked to dem
     		</div>
     	</div>
     </div>
-    <input type="range" id="seekBar" value="0" min="0" max="100" step="0.01">
 	<table style="width:100%">
 		<td id="selectTask" width="150px">
 		</td>
-		<td id="selectSession">
+		<td>
+			<div id="selectSession"></div>
 		</td>
 	</table>
 </div>

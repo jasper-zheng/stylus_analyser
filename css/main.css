@@ -27,15 +27,19 @@ td{
 }
 
 #seekBar{
-	width: 100%;
+	width: 100.4%;
 
 	-webkit-appearance: none;
   appearance: none;
   background: rgb(200,200,200);
   cursor: pointer;
-  height: 10px;
-  margin-bottom: 2em;
+  height: 15px;
+  margin-bottom: 1em;
   transition: background .2s;
+  margin-left: 0;
+  margin-right: 0;
+  position: relative;
+  top:-10px;
 }
 #seekBar:hover{
 	background: rgb(180,180,180);
@@ -43,8 +47,13 @@ td{
 #seekBar::-webkit-slider-thumb {
    -webkit-appearance: none; /* Override default look */
    appearance: none;
-/*   margin-top: -12px;*/
+   margin-top: 7px;
    background-color: rgb(244,160,86);
-   height: 1rem;
-   width: 0.2rem;    
+   height: 1.4rem;
+   width: 0.4%;    
+}
+
+#selectSession{
+	height: 180px;
+	overflow: scroll;
 }
