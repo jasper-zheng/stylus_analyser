@@ -90,6 +90,7 @@ function MainCanvas(p){
 			}
 			eventsT.push(e.t)
 		})
+		console('event done update')
 		cur_page = events.length - 1;
 		if (to_trace){
 			p.listPages();
