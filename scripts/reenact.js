@@ -37,7 +37,8 @@ var selectPage, selectTask, selectSession;
 // ==========================
 // player: 
 
-let audioPlayer;
+let audioPlayer = 0;
+audioPlayer.duration = -1;
 let playButton;
 let pauseButton;
 let seekBar;
@@ -46,6 +47,8 @@ let curTime, durTime;
 // ==========================
 // timeline:
 
+var eventsLoaded = 0;
+var canplaythroughLoaded = 0;
 
 function MainCanvas(p){
 	p.preload = function() {
@@ -90,17 +93,18 @@ function MainCanvas(p){
 			}
 			eventsT.push(e.t)
 		})
-		console('event done update')
+		console.log('event done update')
 		cur_page = events.length - 1;
 		if (to_trace){
 			p.listPages();
 			to_trace = false;
 		}
+
+		eventsLoaded = 1;
 		// console.log(events)
 		// refreshTimeline(data.length);
 	}
 	p.windowResized = function(){
-		// console.log(windowWidth + ' ' + windowHeight)
 		canvas_width = Math.min(canvas_width_default, p.windowWidth-30);
 		p.resizeCanvas(canvas_width,canvas_width/760*400)
 		p.trace(audioPlayer.currentTime);
@@ -145,7 +149,7 @@ function MainCanvas(p){
 	    	}
 	    	selectPage.appendChild(option);
 	    }
-	    p.trace(9999.0);
+	    setTimeout(()=>{p.trace(9999.0);},50)
 	}
 
 	p.setup = function() {
@@ -206,7 +210,8 @@ function MainCanvas(p){
 
 	    selectPage.addEventListener('change', function() {
 	        cur_page = this.value;
-	        p.trace(9999.0);
+	        setTimeout(()=>{p.trace(9999.0);},20)
+	        
 	    });
 	    
 	    // ===========================================
@@ -225,7 +230,8 @@ function MainCanvas(p){
 			console.log('canplaythrough')
 			durTime.innerHTML = (audioPlayer.duration||0).toFixed(3);
 			seekBar.max = audioPlayer.duration||0;
-			refreshTimeline(audioPlayer.duration||0);
+			// refreshTimeline(audioPlayer.duration||0);
+			canplaythroughLoaded = audioPlayer.duration||0
 		}, false);
 
 		// Play the audio
@@ -296,6 +302,7 @@ function MainCanvas(p){
 		curTime.innerHTML = audioPlayer.currentTime.toFixed(3)
 		
 		if (time_updated){
+			// console.log('time update')
 			p.trace(audioPlayer.currentTime);
 			time_updated = false;
 		}
@@ -330,7 +337,7 @@ function Timeline(p){
 		p.display()
 	}
 	p.display = function(){
-		// p.scale(canvas_width/p.length,1)
+		console.log('draw timeline')
 		p.background(255);
 		p.strokeWeight(1)
 
@@ -355,8 +362,14 @@ function Timeline(p){
 			p.line(x,timelineHeight*(1-count/80),x,timelineHeight)
 			
 		}
-		
-		
+	}
+	p.draw = function(){
+		if (eventsLoaded && canplaythroughLoaded){
+			timeline_instance.calculateLength(canplaythroughLoaded)
+			timeline_instance.display()
+			eventsLoaded = 0
+			canplaythroughLoaded = 0;
+		}
 	}
 }
 
@@ -366,7 +379,7 @@ function createTimeline(){
 function resizeTimeline(){
 	timeline_instance.resizeTimeline()
 }
-function refreshTimeline(length){
-	timeline_instance.calculateLength(length)
-	timeline_instance.display()
-}
+// function refreshTimeline(length){
+// 	timeline_instance.calculateLength(length)
+// 	timeline_instance.display()
+// }
