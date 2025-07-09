@@ -17,7 +17,7 @@ list_title2: Results
 
 ![img](./media/scores.jpg)
 
-## Tailoring Gestural Affordances in Audio Latent Space Navigation
+## Exploring Gestural Affordances in Audio Latent Space Navigation
 
 ##### **Author:** Shuoyang Jasper Zheng, Anna Xambó Sedó and Nick Bryan-Kinns  
 
