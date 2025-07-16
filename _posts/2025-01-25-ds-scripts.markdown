@@ -8,25 +8,25 @@ type: Data Collections
 excerpt: The facilitator loosely followed a protocol script during the introduction, pre-task, and warm-up session.  
 ---
 
-**VO**: Verbal instructions
+**VO**: Verbal instructions  
 **AC**: Action items
 
-(2mins) AC: Sign consent forms.
-VO: Okay with photo-taking, data-logging, interview audio and video recording?
+(2mins) AC: Sign consent forms.  
+VO: Okay with photo-taking, data-logging, interview audio and video recording?  
 
-(1mins) VO: Research workshop, purpose: prototype, experience, explore, feedback.
+(1mins) VO: Research workshop, purpose: prototype, experience, explore, feedback.  
 
 (2mins) Check left/right hands, check connections
 
-(2mins) Pre-task survey
-Look at the computer screen in front of you...
-VO: all written texts will be transcribed to text, anonymised, so you won't be able to recognise your handwriting. 
-AC: check all finished
+(2mins) Pre-task survey  
+Look at the computer screen in front of you...  
+VO: all written texts will be transcribed to text, anonymised, so you won't be able to recognise your handwriting.   
+AC: check all finished  
 
-(5mins) Warm-up
-We'll be sketching on the canvas a lot, so in the following warm-up:  
+(5mins) Warm-up  
+We'll be sketching on the canvas a lot, so in the following warm-up:   
 On the canvas below, use your pen to trace the patterns (sketching / pen-stroking techniques), and use your pen to try them out.  
-While you're sketching, focus your attention on how your hand moves, focus on the movement, try to be steady, try different speeds and intensities, and focus on how your hand feels, what your hand feels like.  
+While you're sketching, focus your attention on how your hand moves, focus on the movement, try to be steady, try different speeds and intensities, and focus on how your hand feels, what your hand feels like.   
 
 
 ```
